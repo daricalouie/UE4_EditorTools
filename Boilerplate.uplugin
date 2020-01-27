@@ -1,0 +1,29 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "<#Module Name#>",
+	"Description": "A boilerplate code for a general C++/BP plugin with automatic handling of third-party dependencies.",
+	"Category": "Other",
+	"CreatedBy": "Peter Gusev",
+	"CreatedByURL": "gusev.io",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "4.23.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "<#Module Name#>",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Mac",
+				"Win64",
+				"IOS",
+				"Android"
+			]
+		}
+	]
+}
