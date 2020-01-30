@@ -7,6 +7,9 @@
 //
 
 // A Boilerplate code for a C++/BP plugin that handles third-party dependencies automatically.
+//
+// NOTE: This module is dependent on ReLog plugin. Install it first.
+//
 // How to use:
 // 1. Give a name to your plugin replacing placeholder <#Your Module Name#>
 // 2. Rename all plugin files and folders according your plugin's name:
@@ -28,8 +31,9 @@
 
 #include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
+#include "ReLog.h"
 
-class F<#Module Name#>Module : public IModuleInterface
+class F<#Module Name#>Module : public FReLogModule
 {
 public:
 

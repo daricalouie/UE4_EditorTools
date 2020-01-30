@@ -44,6 +44,7 @@ public class <#Module Name#> : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+				"ReLog",
 				"deps<#Module Name#>"
 				// ... add private dependencies that you statically link with here ...
 			}
