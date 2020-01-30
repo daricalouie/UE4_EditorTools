@@ -2,24 +2,34 @@
 Boilerplate code for a C++/BP plugin that handles dependencies automatically.
 
 ## Setup
-1. Clone the repo into a folder with your **plugin name** (should be whatever your plugin name you'll use for the project; here as an example it's `MyPlugin`):
+The setup process will guide you how to create new plugin from the boilerplate code. 
+
+1. Clone the repo:
+```
+git clone https://github.com/peetonn/UE4_BoilerplatePlugin.git
+```
+
+2. Rename cloned directory into your **plugin name** (substitute `<plugin name>` with your **plugin name**, for example *OSCSupport*).
+
+> **Do not use word "boilerplate" in your plugin name** 
 
 ```
-git clone https://github.com/peetonn/UE4_BoilerplatePlugin.git MyPlugin
+mv UE4_BoilerplatePlugin <plugin name>
 ```
 
-2. From within the plugin folder, run `setup.sh` like this (your plugin name as argument):
+3. Execute these commands (substitute `<plugin name>` with your **plugin name**):
 
 ```
+cd <plugin name>
 ./setup.sh `basename $(pwd)`
 ```
 
-3. Once setup is completed, copy your plugin folder over to your UE4 project's "Plugins" folder.
-4. In Unreal Editor, go to "Plugins" -> "Other" and enable your plugin. This will require editor restart and plugin compilation.
+4. Once the setup is completed, copy your plugin folder over to your UE4 project's "Plugins" folder (create this folder, if it does not exist already).
+5. Restart your project, it will prompt you to recompile found plugins, click "Yes".
 
 This will create main module code for your plugin. You can now start adding code to your plugin.
 
-## Third Party Dependencies
+## Adding Third Party Dependencies
 
 If your plugin requires any C++ third party libraries, the boilerplate code is set up to handle them automatically, **as long as third party code and binaries organized in specific way**, described below.
 Your third party dependency may either be *header-only* or *dynamic library* (which contains also binaries, pre-built for a certain platform, or several platforms).
