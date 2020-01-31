@@ -3,20 +3,35 @@ Boilerplate code for a C++/BP plugin that handles dependencies automatically.
 
 ## Setup
 
-Please, follow **either** of the options below (**Bootstrapping** or **Manual setup**).
-
-### Bootstrapping
-
 In Terminal, navigate to your Unreal project's "Plugins" folder (create one if it does not exist already) and run this command:
 
 ```
 bash <(curl -s https://raw.githubusercontent.com/peetonn/UE4_BoilerplatePlugin/master/bootstrap.sh)
 ```
 
-Restart your Unreal project.
+Restart your project. It will prompt you to recompile found plugins, click "Yes".
+This will create main module code for your plugin. You can now start adding code to your plugin.
 
-### Manual setup
-The setup process will guide you how to create new plugin from the boilerplate code. 
+## Adding Third Party Dependencies
+
+If your plugin requires any C++ third party libraries, the boilerplate code is set up to handle them automatically, **as long as third party code and binaries organized in specific way**, described below.
+Your third party dependency may either be *header-only* or *dynamic library* (which contains also binaries, pre-built for a certain platform, or several platforms).
+In either case, you need to organize your third party dependency in a folder like this:
+
+```
+<third-party lib name>
+  *-- include      // headers should be placed here
+  *-- lib          // (can omit this subfolder for header-only dependencies)
+    *-- Android    // include only those platforms, that your third-party supports
+    *-- IOS
+    *-- macOS
+    *-- Win64
+```
+
+You should place your third party folder under `<plugin name>/ThirdParty/deps<plugin name>` folder. The [build script](https://github.com/peetonn/UE4_BoilerplatePlugin/blob/master/Source/ThirdParty/depsBoilerplate/depsBoilerplate.Build.cs) will pick it up from there for proper compling.
+
+## Manual setup
+If, for some reason, bootstrapping instructions above didn't work, here are the instructions on manual setup.
 
 1. Clone the repo:
 ```
@@ -42,21 +57,3 @@ cd <plugin name>
 5. Restart your project, it will prompt you to recompile found plugins, click "Yes".
 
 This will create main module code for your plugin. You can now start adding code to your plugin.
-
-## Adding Third Party Dependencies
-
-If your plugin requires any C++ third party libraries, the boilerplate code is set up to handle them automatically, **as long as third party code and binaries organized in specific way**, described below.
-Your third party dependency may either be *header-only* or *dynamic library* (which contains also binaries, pre-built for a certain platform, or several platforms).
-In either case, you need to organize your third party dependency in a folder like this:
-
-```
-<third-party lib name>
-  *-- include      // headers should be placed here
-  *-- lib          // (can omit this subfolder for header-only dependencies)
-    *-- Android    // include only those platforms, that your third-party supports
-    *-- IOS
-    *-- macOS
-    *-- Win64
-```
-
-You should place your third party folder under `<plugin name>/ThirdParty/deps<plugin name>` folder. The [build script](https://github.com/peetonn/UE4_BoilerplatePlugin/blob/master/Source/ThirdParty/depsBoilerplate/depsBoilerplate.Build.cs) will pick it up from there for proper compling.
