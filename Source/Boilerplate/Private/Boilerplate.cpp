@@ -14,7 +14,8 @@
 void F<#Module Name#>Module::StartupModule()
 {
     initLogger(LOCTEXT_NAMESPACE);
-    RLOG_PLUGIN_INFO("<#Module Name#> Module startup");
+    RLOG_PLUGIN_INFO("<#Module Name#> Module startup. Version {}. Build Type {}",
+                    TEXT(*getModuleVersion()), TEXT(*getBuildType()));
 
     // To log using ReLog plugin, use these macro definitions:
     // RLOG_PLUGIN_ERROR("Error message");
