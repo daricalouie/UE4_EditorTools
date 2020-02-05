@@ -7,6 +7,6 @@ done
 
 git clone https://github.com/peetonn/UE4_BoilerplatePlugin.git $pluginName
 cd $pluginName
-git remove origin
+git remote remove origin
 echo "# $pluginName" > README.md
 ./setup.sh $pluginName
