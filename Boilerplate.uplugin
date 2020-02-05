@@ -25,5 +25,10 @@
 				"Android"
 			]
 		}
-	]
+	],
+	"PreBuildSteps" : {
+		"Mac": [
+			"cd $(PluginDir) && export GIT_DESCRIBE=`git describe --always --dirty`"
+		]
+	}
 }

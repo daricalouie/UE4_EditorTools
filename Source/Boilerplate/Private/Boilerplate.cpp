@@ -13,7 +13,7 @@
 
 void F<#Module Name#>Module::StartupModule()
 {
-    initLogger(LOCTEXT_NAMESPACE);
+    initModule(LOCTEXT_NAMESPACE, PLUGIN_VERSION);
     RLOG_PLUGIN_INFO("<#Module Name#> Module startup. Version {}. Build Type {}",
                     TCHAR_TO_ANSI(*getModuleVersion()), TCHAR_TO_ANSI(*getBuildType()));
 
