@@ -8,14 +8,18 @@
 
 #include "<#Module Name#>.h"
 #include "logging.hpp"
+#include "git-describe.h"
 
+#define STRINGIZE_VERSION(v) STRINGIZE_TOKEN(v)
+#define STRINGIZE_TOKEN(t) #t
+#define PLUGIN_VERSION STRINGIZE_VERSION(GIT_DESCRIBE)
+
+#define MODULE_NAME "<#Module Name#>"
 #define LOCTEXT_NAMESPACE "F<#Module Name#>Module"
 
 void F<#Module Name#>Module::StartupModule()
 {
-    initModule(LOCTEXT_NAMESPACE, PLUGIN_VERSION);
-    RLOG_PLUGIN_INFO("<#Module Name#> Module startup. Version {}. Build Type {}",
-                    TCHAR_TO_ANSI(*getModuleVersion()), TCHAR_TO_ANSI(*getBuildType()));
+    initModule(MODULE_NAME, PLUGIN_VERSION);
 
     // To log using ReLog plugin, use these macro definitions:
     // RLOG_PLUGIN_ERROR("Error message");
@@ -29,7 +33,6 @@ void F<#Module Name#>Module::StartupModule()
 
 void F<#Module Name#>Module::ShutdownModule()
 {
-    RLOG_PLUGIN_INFO("<#Module Name#> Module shutdown");
 	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
 	// we call this function before unloading the module.
 }

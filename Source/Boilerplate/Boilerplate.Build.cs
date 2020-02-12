@@ -32,7 +32,7 @@ public class <#Module Name#> : ModuleRules
 			new string[]
 			{
 				"Core",
-				"ReBase",
+				"UMG"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -58,9 +58,5 @@ public class <#Module Name#> : ModuleRules
 				// ... add any modules that your module loads dynamically here ...
 			}
 			);
-
-		// TODO: figure out how to replace it with GIT_DESCRIBE
-	    string versionString = "0.0.1"; // Environment.GetEnvironmentVariable("GIT_DESCRIBE");
-	    PrivateDefinitions.Add("PLUGIN_VERSION=\"" + versionString + "\"");
 	}
 }
