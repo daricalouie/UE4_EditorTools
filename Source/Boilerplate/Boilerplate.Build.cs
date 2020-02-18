@@ -32,7 +32,9 @@ public class <#Module Name#> : ModuleRules
 			new string[]
 			{
 				"Core",
-				"UMG"
+				"UMG",
+				"DDBase",
+				"DDLog"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -45,7 +47,6 @@ public class <#Module Name#> : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
-				"ReLog",
 				"deps<#Module Name#>"
 				// ... add private dependencies that you statically link with here ...
 			}

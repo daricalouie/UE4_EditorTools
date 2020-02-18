@@ -31,9 +31,9 @@
 
 #include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
-#include "ReLog.h"
+#include "DDBase.h"
 
-class F<#Module Name#>Module : public FReLogModule
+class F<#Module Name#>Module : public FDDBaseModule
 {
 public:
 

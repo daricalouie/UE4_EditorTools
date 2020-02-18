@@ -22,11 +22,11 @@ void F<#Module Name#>Module::StartupModule()
     initModule(MODULE_NAME, PLUGIN_VERSION);
 
     // To log using ReLog plugin, use these macro definitions:
-    // RLOG_PLUGIN_ERROR("Error message");
-    // RLOG_PLUGIN_WARN("Warning message");
-    // RLOG_PLUGIN_INFO("Info message");
-    // RLOG_PLUGIN_DEBUG("Debug message");
-    // RLOG_PLUGIN_TRACE("Trace message");
+    // DLOG_PLUGIN_ERROR("Error message");
+    // DLOG_PLUGIN_WARN("Warning message");
+    // DLOG_PLUGIN_INFO("Info message");
+    // DLOG_PLUGIN_DEBUG("Debug message");
+    // DLOG_PLUGIN_TRACE("Trace message");
 
     // This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
 }
