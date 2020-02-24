@@ -1,16 +1,16 @@
 //
-// <#Module Name#>.Build.cs
+// EditorTools.Build.cs
 //
-//  Generated on <#generation date#>
+//  Generated on 24 February 2020.
 //  Template created by Peter Gusev on 27 January 2020.
 //  Copyright 2013-2019 Regents of the University of California
 //
 
 using UnrealBuildTool;
 
-public class <#Module Name#> : ModuleRules
+public class EditorTools : ModuleRules
 {
-	public <#Module Name#>(ReadOnlyTargetRules Target) : base(Target)
+	public EditorTools(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 

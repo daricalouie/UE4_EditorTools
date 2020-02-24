@@ -1,12 +1,12 @@
 //
-// <#Module Name#>.cpp
+// EditorTools.cpp
 //
-//  Generated on <#generation date#>
+//  Generated on 24 February 2020.
 //  Template created by Peter Gusev on 27 January 2020.
 //  Copyright 2013-2019 Regents of the University of California
 //
 
-#include "<#Module Name#>.h"
+#include "EditorTools.h"
 #include "logging.hpp"
 #include "git-describe.h"
 
@@ -14,10 +14,10 @@
 #define STRINGIZE_TOKEN(t) #t
 #define PLUGIN_VERSION STRINGIZE_VERSION(GIT_DESCRIBE)
 
-#define MODULE_NAME "<#Module Name#>"
-#define LOCTEXT_NAMESPACE "F<#Module Name#>Module"
+#define MODULE_NAME "EditorTools"
+#define LOCTEXT_NAMESPACE "FEditorToolsModule"
 
-void F<#Module Name#>Module::StartupModule()
+void FEditorToolsModule::StartupModule()
 {
     initModule(MODULE_NAME, PLUGIN_VERSION);
 
@@ -31,7 +31,7 @@ void F<#Module Name#>Module::StartupModule()
     // This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
 }
 
-void F<#Module Name#>Module::ShutdownModule()
+void FEditorToolsModule::ShutdownModule()
 {
 	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
 	// we call this function before unloading the module.
@@ -39,4 +39,4 @@ void F<#Module Name#>Module::ShutdownModule()
 
 #undef LOCTEXT_NAMESPACE
 
-IMPLEMENT_MODULE(F<#Module Name#>Module, <#Module Name#>)
+IMPLEMENT_MODULE(FEditorToolsModule, EditorTools)
