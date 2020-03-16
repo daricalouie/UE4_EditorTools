@@ -1,0 +1,1 @@
+#define GIT_DESCRIBE 5c7223b
