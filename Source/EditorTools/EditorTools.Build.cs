@@ -47,7 +47,7 @@ public class EditorTools : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
-				"deps<#Module Name#>"
+				"depsEditorTools"
 				// ... add private dependencies that you statically link with here ...
 			}
 			);
