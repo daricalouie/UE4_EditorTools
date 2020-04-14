@@ -33,11 +33,12 @@
 #include "Modules/ModuleManager.h"
 #include "DDBase.h"
 
-class FEditorToolsModule : public FDDBaseModule
+class EDITORTOOLS_API FEditorToolsModule : public FDDBaseModule
 {
 public:
 
 	/** IModuleInterface implementation */
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
+	static void setAllVisible(FString tag, UWorld* a1, bool vis);
 };

@@ -17,6 +17,7 @@ public class EditorTools : ModuleRules
 		PublicIncludePaths.AddRange(
 			new string[] {
 				// ... add public include paths required here ...
+				"Plugins/EditorTools/Public"
 			}
 			);
 
@@ -24,6 +25,7 @@ public class EditorTools : ModuleRules
 		PrivateIncludePaths.AddRange(
 			new string[] {
 				// ... add other private include paths required here ...
+				"Plugins/EditorTools/Private"
 			}
 			);
 
