@@ -1,16 +1,15 @@
 //
-// EditorTools.Build.cs
+// EditorToolsBlueprint.Build.cs
 //
-//  Generated on 24 February 2020.
 //  Template created by Peter Gusev on 27 January 2020.
 //  Copyright 2013-2019 Regents of the University of California
 //
 
 using UnrealBuildTool;
 
-public class EditorTools : ModuleRules
+public class EditorToolsBlueprint : ModuleRules
 {
-	public EditorTools(ReadOnlyTargetRules Target) : base(Target)
+	public EditorToolsBlueprint(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 
@@ -32,9 +31,7 @@ public class EditorTools : ModuleRules
 			new string[]
 			{
 				"Core",
-				"UMG",
-				"DDBase",
-				"DDLog"
+                "DDHelpers"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -46,8 +43,7 @@ public class EditorTools : ModuleRules
 				"CoreUObject",
 				"Engine",
 				"Slate",
-				"SlateCore",
-				"depsEditorTools"
+				"SlateCore"
 				// ... add private dependencies that you statically link with here ...
 			}
 			);

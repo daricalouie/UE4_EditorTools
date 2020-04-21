@@ -40,5 +40,5 @@ public:
 	/** IModuleInterface implementation */
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
-	static void setAllVisible(FString tag, UWorld* a1, bool vis);
+	static void setAllVisible(FString tag, bool vis);
 };

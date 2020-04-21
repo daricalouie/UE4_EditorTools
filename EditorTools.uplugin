@@ -24,6 +24,15 @@
 				"IOS",
 				"Android"
 			]
+		},
+		{
+			"Name": "EditorToolsBlueprint",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Mac",
+				"Win64"
+			]
 		}
 	],
 	"Plugins" : [

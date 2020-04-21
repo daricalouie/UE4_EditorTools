@@ -40,8 +40,9 @@ void FEditorToolsModule::ShutdownModule()
 	// we call this function before unloading the module.
 }
 
-void FEditorToolsModule::setAllVisible(FString tag, UWorld * a1, bool vis) {
+void FEditorToolsModule::setAllVisible(FString tag, bool vis) {
     FName tagName = FName(*tag);
+    UWorld * a1 = GEngine->GetWorldContexts()[0].World();
 
     for (TActorIterator<AActor> ActorIterator(a1); ActorIterator; ++ActorIterator) {
         AActor* actor = *ActorIterator;
