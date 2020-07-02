@@ -41,10 +41,15 @@
 			"Enabled": true
 		}
 	],
-	"PreBuildSteps" : {
+	"PreBuildSteps": {
 		"Mac": [
 			"cd $(PluginDir) && export GIT_DESCRIBE=`git describe --always --dirty` && echo \"EditorTools plugin version ${GIT_DESCRIBE}\"",
 			"cd $(PluginDir) && echo \"#define GIT_DESCRIBE ${GIT_DESCRIBE}\" > Source/EditorTools/Private/git-describe.h"
+		],
+		"Win64": [
+			"cd /d $(PluginDir) && git describe --always --dirty > git-describe.tmp && set /p GIT_DESCRIBE= < git-describe.tmp",
+			"echo #define GIT_DESCRIBE %GIT_DESCRIBE% > Source/EditorTools/Private/git-describe.h",
+			"del git-describe.tmp"
 		]
 	}
 }
