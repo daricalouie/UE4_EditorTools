@@ -25,7 +25,6 @@ public class EditorTools : ModuleRules
 			new string[] {
 				// ... add other private include paths required here ...
 				"/EditorTools/Private"			}
-				}
 				);
 
 
