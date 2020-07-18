@@ -1,1 +1,1 @@
-#define GIT_DESCRIBE 0bfbeab-dirty 
+#define GIT_DESCRIBE 08c0052-dirty 
